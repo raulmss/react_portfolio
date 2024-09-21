@@ -1,16 +1,17 @@
 // import images
-import Hero_person from "./assets/images/Hero/person.png";
+import Hero_person from "./assets/images/Hero/Raul_Hero.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+import spring from "./assets/images/Skills/spring.png";
 import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
+import java from "./assets/images/Skills/java.png";
+import mysql from "./assets/images/Skills/MySQL.png";
+import postgresql from "./assets/images/Skills/PostgresSQL.png";
+import javascript from "./assets/images/Skills/JavaScript.png";
+import postman from "./assets/images/Skills/Postman.png";
+import playwrite from "./assets/images/Skills/Playwrite.png";
 
-import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+import ufrn from "./assets/images/Services/UFRN.png";
+import miu from "./assets/images/Services/miu.png";
 
 import project1 from "./assets/images/projects/img1.png";
 import project2 from "./assets/images/projects/img2.png";
@@ -28,11 +29,11 @@ import Hireme_person2 from "./assets/images/Hireme/person2.png";
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
-import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
+import { RiMapPinTimeLine } from "react-icons/ri";
+import { MdOutlinePermContactCalendar, MdBook } from "react-icons/md";
 
 export const content = {
   nav: [
@@ -45,12 +46,12 @@ export const content = {
       icon: BiUser,
     },
     {
-      link: "#services",
-      icon: RiServiceLine,
+      link: "#experiences",
+      icon: RiMapPinTimeLine,
     },
     {
-      link: "#projects",
-      icon: RiProjectorLine,
+      link: "#education",
+      icon: MdBook,
     },
     {
       link: "#contact",
@@ -58,19 +59,19 @@ export const content = {
     },
   ],
   hero: {
-    title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
+    title: "Software Engineer",
+    firstName: "RAUL",
+    LastName: "SOUTO",
     btnText: "Hire Me",
     image: Hero_person,
     hero_content: [
       {
-        count: "8+",
-        text: "Years of Experinse in Web development",
+        count: "2+",
+        text: "Years of Experience in Software Engineering",
       },
       {
-        count: "20+",
-        text: "Projects Worked in my career",
+        count: "3",
+        text: "Domains of expertise: EdTech, Public Administration, and LegalTech. ",
       },
     ],
   },
@@ -79,56 +80,61 @@ export const content = {
     subtitle: "MY TOP SKILLS",
     skills_content: [
       {
-        name: "Figma",
-        para: "Lorem ipsum text  dummy",
-        logo: figma,
+        name: "Java",
+        para: "OOP Development.",
+        logo: java,
       },
       {
-        name: "Node js",
-        para: "Lorem ipsum text  dummy",
-        logo: nodejs,
+        name: "JavaScript",
+        para: "Test Scripting (on Postman and Playwrite).",
+        logo: javascript,
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text  dummy",
-        logo: ps,
+        name: "Spring Boot",
+        para: "Back-end Development.",
+        logo: spring,
       },
       {
         name: "React js",
-        para: "Lorem ipsum text  dummy",
+        para: "Front-end development.",
         logo: reactjs,
       },
       {
-        name: "Sketch",
-        para: "Lorem ipsum text  dummy",
-        logo: sketch,
+        name: "MySQL",
+        para: "Database Management.",
+        logo: mysql,
       },
       {
-        name: "Python",
-        para: "Lorem ipsum text  dummy",
-        logo: python,
+        name: "PostgreSQL",
+        para: "Database Management.",
+        logo: postgresql,
+      },
+      {
+        name: "Postman",
+        para: "API Automation Testing.",
+        logo: postman,
+      },
+      {
+        name: "Playwrite",
+        para: "API, Regression, End-to-End, Dynamic Content and more.",
+        logo: playwrite,
       },
     ],
     icon: MdArrowForward,
   },
-  services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
+  education: {
+    title: "Education",
+    subtitle: "",
     service_content: [
       {
-        title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo1,
+        title: "Bachelor's in Information Technology",
+        para: "Feb/2018 - July/2022",
+        logo: ufrn,
       },
       {
-        title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
-      },
-      {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
+        title: "Master's in Computer Science",
+        para: "Aug/2023 - April/2026",
+        logo: miu,
       },
     ],
   },
@@ -194,19 +200,19 @@ export const content = {
     subtitle: "GET IN TOUCH",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "raul.soutos96@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:raul.soutos96@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "(641) 233-9071",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/16412339071",
       },
       {
-        text: "codeaprogram",
-        icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        text: "linkedin",
+        icon: BsLinkedin,
+        link: "https://www.linkedin.com/in/raul-souto/",
       },
     ],
   },

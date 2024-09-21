@@ -2,32 +2,32 @@ import { createElement, useRef } from "react";
 import { content } from "../Content";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { useState } from "react";
 
 const Contact = () => {
   const { Contact } = content;
   const form = useRef();
 
+  const [formData, setFormData] = useState({
+    from_name: "",
+    user_phone: "",
+    message_title: "",
+    user_email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
   // Sending Email
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-      'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          // Clear all input field values
-          form.current.reset();
-          // Success toast message
-          toast.success("Email send Successfully");
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error(error.text);
-        }
-      );
   };
 
   return (
@@ -52,7 +52,21 @@ const Contact = () => {
             <input
               type="text"
               name="from_name"
-              placeholder="Name"
+              placeholder="Name*"
+              required
+              className="border border-slate-600 p-3 rounded"
+            />
+              <input
+                type="phone"
+                name="user_phone"
+                pattern="\(?\d{3}\)?-?\s?\d{3}-?\s?\d{4}$"
+                placeholder="Phone"
+                className="border border-slate-600 p-3 rounded"
+              />
+            <input
+              type="text"
+              name="message_title"
+              placeholder="Message Title*"
               required
               className="border border-slate-600 p-3 rounded"
             />
@@ -60,13 +74,13 @@ const Contact = () => {
               type="email"
               name="user_email"
               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-              placeholder="Email Id"
+              placeholder="Email Address*"
               required
               className="border border-slate-600 p-3 rounded"
             />
             <textarea
               name="message"
-              placeholder="Message"
+              placeholder="Message*"
               className="border border-slate-600 p-3 rounded h-44"
               required
             ></textarea>
